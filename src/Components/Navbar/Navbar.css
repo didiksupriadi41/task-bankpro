@@ -1,0 +1,35 @@
+.navbar {
+    background: white;
+    margin: 0;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    /* padding-left: 20px; */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block; 
+    color: black;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #1e8efd;
+    color: white;
+}
+
+Router {
+    background: transparent;
+}
