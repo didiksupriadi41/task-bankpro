@@ -4,7 +4,6 @@ import './Navbar.css';
 import Home from '../Home/Home';
 import Transfer from '../Transfer/Transfer';
 import Transaction from '../Transaction/Transaction';
-// import LogoBank from '../LogoBank/LogoBank';
 
 const Navbar = () => {
     return (
@@ -17,11 +16,17 @@ const Navbar = () => {
                     <li><Link to={'/Transaction'}>Transaction</Link></li>
                 </ul>
                 </nav>
-                {/* <LogoBank /> */}
+
                 <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route path='/Transfer' component={Transfer} />
-                    <Route path='/Transaction' component={Transaction} />
+                    <Route exact path='/'>
+                        <Home name="Home"/>
+                    </Route>
+                    <Route path='/Transfer'>
+                        <Transfer />
+                    </Route> component={Transfer} />
+                    <Route path='/Transaction'>
+                        <Transaction />
+                    </Route>
                 </Switch>
             </div>
         </Router>

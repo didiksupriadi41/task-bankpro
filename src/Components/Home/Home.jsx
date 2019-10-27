@@ -1,10 +1,13 @@
 import React from 'react';
 import './Home.css';
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div className="Home">
-            <h1>Home</h1>
+            <h1>{props.name}</h1>
+            <p>No Rekening</p>
+            <p>Nama bank</p>
+            <p>Saldo terakhir</p>
         </div>
     )
 }
