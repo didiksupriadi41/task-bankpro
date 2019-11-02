@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-import Login from './Components/Login/Login';
+import Navbar from '../Components/Navbar/Navbar';
+import Login from '../Container/Login/Login';
 
 class App extends React.Component {
 	constructor(props){
@@ -13,7 +13,13 @@ class App extends React.Component {
 
 	triggerLogin = () => {
 		this.setState({
-			isLogin:true
+			isLogin: true
+		})
+	}
+
+	triggerLogout = () => {
+		this.setState({
+			isLogin: false
 		})
 	}
 
@@ -21,7 +27,7 @@ class App extends React.Component {
 		return (
 			<div>
 				{!this.state.isLogin && <Login onClicked={() => this.triggerLogin()}/>}
-				{this.state.isLogin && <Navbar />}
+				{this.state.isLogin && <Navbar onLogout={() => this.triggerLogout()}/>}
 			</div>
 		)
 	}
