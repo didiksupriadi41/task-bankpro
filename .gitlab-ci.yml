@@ -1,0 +1,38 @@
+image: node:latest
+
+#This command is run before actual stages start running
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - npm install
+
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm run test
+
+lint:
+  stage: test
+  script:
+    - npm run lint
+  
+build:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 hour
+
+deployToAWS:
+  only:
+    - master
+    - development
+  stage: deploy
+  script:
+    - bash deploy.sh
