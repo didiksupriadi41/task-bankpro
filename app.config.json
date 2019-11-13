@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "bank-pro",
+            "script": "npx",
+            "args": "serve -s build - p 4000"
+        }
+    ]
+}
