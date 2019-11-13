@@ -24,10 +24,10 @@ build:
   stage: build
   script:
     - npm run build
-  artefact:
+  artifacts:
     paths:
       - build/
-    expire_int: 1 hour
+    expire_in: 1 hour
 
 deployToAWS:
   only:
