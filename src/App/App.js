@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Navbar from '../Components/Navbar/Navbar';
 import Login from '../Container/Login/Login';
+import Navbar from '../Components/Navbar/Navbar';
 
 class App extends React.Component {
 	constructor(props) {
@@ -18,6 +18,7 @@ class App extends React.Component {
 	}
 
 	triggerLogout = () => {
+		sessionStorage.removeItem('noRek');
 		this.setState({
 			isLogin: false
 		})
