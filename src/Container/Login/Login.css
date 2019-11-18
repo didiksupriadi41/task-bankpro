@@ -21,7 +21,7 @@
     margin: auto;
 }
 
-form {
+.login-box > form {
     display: table;
     border-bottom: 1px solid rgb(173, 173, 173);
 }
@@ -31,7 +31,7 @@ form {
     width: 100%;
 }
 
-input {
+.login-no-rekening {
     padding: 10px 0 10px 0;
     position: relative;
     display: block;
@@ -43,11 +43,11 @@ input {
     font-size: medium;
 }
 
-input:focus {
+.login-no-rekening:focus {
     outline: none;
 }
 
-button {
+.login-button {
     /* float: right;
     padding: 10px;
     border-radius: 5px;
@@ -63,7 +63,7 @@ button {
     color:  rgb(173, 173, 173);
 }
 
-button:hover {
+.login-button:hover {
     outline: none;
     font-size: 20px;
     color: black;

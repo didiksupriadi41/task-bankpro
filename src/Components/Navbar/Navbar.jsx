@@ -7,6 +7,8 @@ import Transaction from '../../Container/Transaction/Transaction';
 import logo from '../../assets/logo.png';
 
 const Navbar = (props) => {
+    // const [page, setPage] = useState("Home");
+
     return (
         <Router>
             <div className="navbar">
@@ -15,6 +17,7 @@ const Navbar = (props) => {
                     <li><Link to={'/'} id="logo-link"> <img src={logo} alt="logo" className="logo-navbar"/> </Link></li>
                     <li><Link to={'/transfer'}>Transfer</Link></li>
                     <li><Link to={'/transaction'}>Transaction</Link></li>
+                    {/* <li>{props.page}</li> */}
                     <li><Link to={'/'} onClick={props.onLogout}>Logout</Link></li>
                 </ul>
                 </nav>
