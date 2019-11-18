@@ -33,3 +33,17 @@ li a:hover {
 Router {
     background: transparent;
 }
+
+.logo-navbar {
+    width: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+#logo-link {
+    padding:10px;
+}
+
+#logo-link:hover {
+    background-color: white;
+}

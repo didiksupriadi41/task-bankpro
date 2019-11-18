@@ -1,34 +1,70 @@
-.login-box {
-    background-color: white;
-    padding: 40px;
+.login {
+    margin: 0;
+    position: relative;
+    top:50%;
+    -ms-transform: translateY(80%);
+    transform: translateY(80%);
+}
+
+.logo {
     width: 400px;
-    /* float: right; */
     margin: auto;
-    margin-top: 10%;
-}
-
-.title {
     text-align: center;
-    margin-bottom: 30px;
 }
 
-input[type="text"], input[type="password"] {
-    width: 90%;
-    padding: 10px;
+.logo > img {
+    padding-bottom: 40px;
+}
+
+.login-box {
+    width: 251px;
+    margin: auto;
+}
+
+form {
+    display: table;
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.no-rekening {
+    display: table-cell;
+    width: 100%;
+}
+
+input {
+    padding: 10px 0 10px 0;
     position: relative;
     display: block;
-    margin: 30px auto;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 0;
+    margin-right: 0;
     border: none;
-    border-bottom: 2px solid rgb(173, 173, 173);
+    font-size: medium;
+}
+
+input:focus {
+    outline: none;
 }
 
 button {
-    float: right;
+    /* float: right;
     padding: 10px;
     border-radius: 5px;
     background: black;
     color: white;
     border: none;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 10px; */
+    float: right;
+    padding: 10px 0 10px;
+    background: none;
+    border: none;
+    color:  rgb(173, 173, 173);
+}
+
+button:hover {
+    outline: none;
+    font-size: 20px;
+    color: black;
 }

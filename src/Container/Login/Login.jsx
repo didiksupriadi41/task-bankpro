@@ -1,28 +1,51 @@
 import React from 'react';
 import './Login.css';
+import logo from '../../assets/logo.png';
 
 class Login extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            noRekening: '',
+            redirectTo: false
+        };
+
+        this.login = this.login.bind(this);
+        this.onChange = this.onChange.bind(this);
+    }
+
+    login() {
+        //JAVA SOAP action
+        sessionStorage.setItem('noRek', this.state.noRekening);
+        this.setState({redirectTo: true});
+    }
+
+    onChange(e) {
+        this.setState({
+            noRekening: e.target.value
+        });
+    }
+
     handleLogin = () => {
+        this.login();
         this.props.onClicked()
     }
 
 	render() {
 		return (
-			<div className="login-box">
-            <div className="title">
-                <h1>Welcome</h1>
+        <div className="login">
+            <div className="logo">
+                <img src={logo} alt="logo"/>
             </div>
-            <form>
-                <div className="input-container">
-                <input type="text" placeholder="No Rekening" className="no-rekening"/>
-                </div>
-                <div className="input-container">
-                <input type="password" placeholder="Password" className="no-rekening"/>
-                </div>
-                <div className="input-container">
-                <button onClick={this.handleLogin}>Log In</button>
-                </div>
-            </form>
+            
+			<div className="login-box">
+                <form>
+                    <div className="no-rekening">
+                    <input type="text" placeholder="No Rekening" className="no-rekening" onChange={this.onChange}/>
+                    </div>
+                    <button onClick={this.handleLogin}>></button>
+                </form>
+            </div>
         </div>
 		)
 	}
