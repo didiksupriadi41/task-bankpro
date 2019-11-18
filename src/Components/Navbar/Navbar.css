@@ -10,23 +10,27 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: transparent;
-    /* padding-left: 20px; */
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    /* overflow: auto; */
 }
 
-li {
+/* li {
     float: left;
-}
+    display: block;
+} */
 
 li a {
     display: block; 
     color: black;
-    text-align: center;
+    text-align: left;
     padding: 20px 20px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #1e8efd;
+    background-color: orange;
     color: white;
 }
 
@@ -35,8 +39,8 @@ Router {
 }
 
 .logo-navbar {
-    width: 60px;
-    padding: 0;
+    width: 120px;
+    padding: 0 0 0 10px;
     margin: 0;
 }
 
