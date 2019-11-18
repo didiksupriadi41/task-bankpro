@@ -1,0 +1,22 @@
+.transaction-list {
+    margin: 10px 0 10px 10%;
+    padding: 10px;
+    border: 1px solid black;
+    width: 400px;
+}
+
+.trs-waktu {
+    padding: 0 10px 0 10px;
+}
+
+.trs-jenis {
+    padding: 0 10px 0 10px;
+}
+
+.trs-jumlah {
+    padding: 0 10px 0 10px;
+}
+
+.trs-rekening {
+    padding: 0 10px 0 10px;
+}
