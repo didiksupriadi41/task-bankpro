@@ -41,9 +41,9 @@ class Login extends React.Component {
 			<div className="login-box">
                 <form>
                     <div className="no-rekening">
-                    <input type="text" placeholder="No Rekening" className="no-rekening" onChange={this.onChange}/>
+                    <input type="text" placeholder="No Rekening" className="login-no-rekening" onChange={this.onChange}/>
                     </div>
-                    <button onClick={this.handleLogin}>></button>
+                    <button onClick={this.handleLogin} className="login-button">></button>
                 </form>
             </div>
         </div>

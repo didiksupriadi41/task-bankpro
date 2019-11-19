@@ -6,8 +6,14 @@ import Navbar from '../Components/Navbar/Navbar';
 class App extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {
-			isLogin: false
+		if(sessionStorage.getItem('noRek')) {
+			this.state = {
+				isLogin: true
+			};
+		} else {
+			this.state = {
+				isLogin: false
+			}
 		}
 	}
 
