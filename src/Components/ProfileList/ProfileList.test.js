@@ -3,7 +3,6 @@ import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 
 import ProfileList from './ProfileList';
-import { isTSAnyKeyword, isTSBigIntKeyword, exportAllDeclaration } from '@babel/types';
 
 let container = null;
 beforeEach(() => {
