@@ -28,6 +28,9 @@ build:
     paths:
       - build/
     expire_in: 1 hour
+  only:
+    - master
+    - development
 
 deployToAWS:
   only:
