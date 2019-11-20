@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Title from '../../Components/Title/Title';
+import ProfileList from '../../Components/ProfileList/ProfileList';
 
 class Home extends React.Component {
     constructor(){
@@ -15,10 +16,10 @@ class Home extends React.Component {
     render() {
         return(
             <div className="home">
-                <Title title="Home"/>
-                <p>No Rekening : {this.state.noRekening}</p>
-                <p>Nama bank : {this.state.namaBank}</p>
-                <p>Saldo terakhir : {this.state.saldo}</p>
+                <Title title="Welcome"/>
+                <ProfileList category="No Rekening" data={this.state.noRekening} />
+                <ProfileList category="Nama Bank" data={this.state.namaBank} />
+                <ProfileList category="Saldo" data={this.state.saldo} />
             </div>
         )
     }
