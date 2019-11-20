@@ -1,22 +1,17 @@
 .transaction-list {
-    margin: 10px 0 10px 10%;
-    padding: 10px;
-    border: 1px solid black;
-    width: 400px;
+    margin: auto;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+    width: fit-content;
+    text-align: center;
+    height: 30px;
 }
 
-.trs-waktu {
-    padding: 0 10px 0 10px;
+.transaction-list span {
+    float: left;
+    width: 180px;
 }
 
-.trs-jenis {
-    padding: 0 10px 0 10px;
-}
-
-.trs-jumlah {
-    padding: 0 10px 0 10px;
-}
-
-.trs-rekening {
-    padding: 0 10px 0 10px;
+.transaction-list:last-child {
+    border: none;
 }
