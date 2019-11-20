@@ -1,5 +1,9 @@
+.transfer {
+    padding-top: 10%;
+    margin-left: 10%;
+}
+
 .transfer > form {
-    /* margin-left: 10%; */
     margin: auto;
     width: 20%;
 }
@@ -15,7 +19,7 @@
     border-bottom: 1px solid black;
 }
 
-.trf-no-rekening, .trf-no-rekening:focus {
+.trf-no-rekening, .trf-amount:focus {
     outline: none;
 }
 
