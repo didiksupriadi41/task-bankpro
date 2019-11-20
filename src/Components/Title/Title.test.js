@@ -24,9 +24,9 @@ it("Testing Title component", () => {
     expect(container.textContent).toBe("");
 
     act(() => {
-        render(<Title title="Home"/>, container);
+        render(<Title title="Welcom"/>, container);
     });
-    expect(container.textContent).toBe("Home");
+    expect(container.textContent).toBe("Welcom");
 
     act(() => {
         render(<Title title="Transfer"/>, container);
@@ -34,7 +34,7 @@ it("Testing Title component", () => {
     expect(container.textContent).toBe("Transfer");
 
     act(() => {
-        render(<Title title="Transaction"/>, container);
+        render(<Title title="Riwayat Transaksi"/>, container);
     });
-    expect(container.textContent).toBe("Transaction");
+    expect(container.textContent).toBe("Riwayat Transaksi");
 });
