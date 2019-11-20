@@ -7,9 +7,8 @@ import Transaction from '../../Container/Transaction/Transaction';
 import logo from '../../assets/logo.png';
 
 const Navbar = (props) => {
-    const [page, setPage] = useState("");  
-    console.log(window.location.pathname)
-    // forceUpdate()
+    const [, setPage] = useState("");  
+    
     return (    
         <Router>
             <div className="navbar">
