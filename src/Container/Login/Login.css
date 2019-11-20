@@ -17,7 +17,7 @@
 }
 
 .login-box {
-    width: 251px;
+    width: 15em;
     margin: auto;
 }
 
@@ -61,6 +61,7 @@
     background: none;
     border: none;
     color:  rgb(173, 173, 173);
+    width: 1em;
 }
 
 .login-button:hover {
