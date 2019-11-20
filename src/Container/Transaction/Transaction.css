@@ -1,9 +1,11 @@
 .transaction {
-    width: 500px;
     margin: auto;
+    margin-left: 10%;
+    text-align: center;
+    /* position: relative; */
+    padding-top: 5%;
 }
 
-.judul-transaksi {
-    margin: auto;
-    text-align: center;
+.riwayat-transaksi {
+    padding-bottom: 5%;
 }

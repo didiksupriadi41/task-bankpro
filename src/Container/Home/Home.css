@@ -2,6 +2,10 @@
     background-color: transparent;
 }
 
-.home > p {
+.home {
     margin-left: 10%;
+}
+
+.home > p {
+    padding-left: 20px;
 }

@@ -13,7 +13,7 @@ ul {
     width: 10%;
     height: 100%;
     position: fixed;
-    /* overflow: auto; */
+    background-color:#deffe6;
 }
 
 /* li {
@@ -39,15 +39,22 @@ Router {
 }
 
 .logo-navbar {
-    width: 120px;
-    padding: 0 0 0 10px;
-    margin: 0;
+    width: 7vw;
+    padding: 0;
+    margin: 10px 0 10px 0;
 }
 
 #logo-link {
-    padding:10px;
+    /* padding:10px; */
+    padding: 0;
+    text-align: center;
 }
 
 #logo-link:hover {
-    background-color: white;
+    background-color: transparent;
+}
+
+.active {
+    background-color: orange;
+    color: white;
 }
