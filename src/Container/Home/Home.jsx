@@ -6,35 +6,38 @@ import ProfileList from '../../Components/ProfileList/ProfileList';
 var XMLParser = require('react-xml-parser');
 
 class Home extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             noRekening: sessionStorage.getItem('noRek'),
             namaBank: 'Bank Pro',
-            saldo: 10000
+            saldo: 10000,
+            isFetching: true
         }
     }
 
     componentDidMount(){
-        const proxyurl = "https://cors-anywhere.herokuapp.com/";
-        var xmlRequest = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.test.org/">' +
-        '<soapenv:Header/>' +
-        '<soapenv:Body>' + 
-           '<ws:sayHello>' + 
-              '<guestname>DIDIK</guestname>' + 
-           '</ws:sayHello>' +
-        '</soapenv:Body>' + 
-        '</soapenv:Envelope>';
+        var xmlRequest = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.test.org/">'
+        + '<soapenv:Header/>'
+            + '<soapenv:Body>'
+                + '<ws:getUserData>'
+                    + `<accountNumber>${this.state.noRekening}</accountNumber>`
+                + '</ws:getUserData>'
+            + '</soapenv:Body>'
+        + '</soapenv:Envelope>';
 
-        Axios.post(proxyurl + 'http://ma.kam-itb.com:8080/soap-test/bankService', xmlRequest,
+        Axios.post('http://ma.kam-itb.com:8080/soap-test/bankService', xmlRequest,
             {headers: {'Content-Type':'text/xml'}
         }).then(res => {
             var xml = new XMLParser().parseFromString(res.data);
-            // console.log(xml.getElementsByTagName('return')[0].value);
-            var newName = xml.getElementsByTagName('return')[0].value
+            var value = xml.getElementsByTagName('return')[0].value
+            var data = JSON.parse(value)[0];
             this.setState({
-                noRekening: newName
+                noRekening: data.account_number,
+                saldo: data.balance,
+                isFetching: false
             })
+            
         }).catch(err => {console.log(err)});
     }
 
@@ -42,9 +45,9 @@ class Home extends React.Component {
         return(
             <div className="home">
                 <Title title="Welcome"/>
-                <ProfileList category="No Rekening" data={this.state.noRekening} />
-                <ProfileList category="Nama Bank" data={this.state.namaBank} />
-                <ProfileList category="Saldo" data={this.state.saldo} />
+                <ProfileList category="No Rekening" data={this.state.noRekening} isFetching={this.state.isFetching}/>
+                <ProfileList category="Nama Bank" data={this.state.namaBank} isFetching={this.state.isFetching}/>
+                <ProfileList category="Saldo" data={this.state.saldo} isFetching={this.state.isFetching}/>
             </div>
         )
     }
