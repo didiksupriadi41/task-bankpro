@@ -9,9 +9,10 @@ class Home extends React.Component {
     constructor(props){
         super(props);
         this.state = {
+            namaPemilik: "",
             noRekening: sessionStorage.getItem('noRek'),
-            namaBank: 'Bank Pro',
-            saldo: 10000,
+            namaBank: "Bank Pro",
+            saldo: 0,
             isFetching: true
         }
     }
@@ -33,6 +34,7 @@ class Home extends React.Component {
             var value = xml.getElementsByTagName('return')[0].value
             var data = JSON.parse(value)[0];
             this.setState({
+                namaPemilik: data.name,
                 noRekening: data.account_number,
                 saldo: data.balance,
                 isFetching: false
@@ -45,6 +47,7 @@ class Home extends React.Component {
         return(
             <div className="home">
                 <Title title="Welcome"/>
+                <ProfileList category="Nama Pemilik" data={this.state.namaPemilik} isFetching={this.state.isFetching}/>
                 <ProfileList category="No Rekening" data={this.state.noRekening} isFetching={this.state.isFetching}/>
                 <ProfileList category="Nama Bank" data={this.state.namaBank} isFetching={this.state.isFetching}/>
                 <ProfileList category="Saldo" data={this.state.saldo} isFetching={this.state.isFetching}/>
