@@ -69,3 +69,16 @@
     font-size: 20px;
     color: black;
 }
+
+.loader-login {
+    width: fit-content;
+    /* padding-bottom: 10px; */
+    /* text-align: center; */
+    margin:auto;
+    /* color: #537528; */
+}
+
+.pesan-error {
+    text-align: center;
+    color: red;
+}
