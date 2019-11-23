@@ -45,7 +45,7 @@ class Transaction extends React.Component {
                 riwayatTransaksi: data
             })
 
-            if (data.length === 1) {
+            if (!data[0].amount) {
                 this.setState({
                     isTampil: false
                 })
