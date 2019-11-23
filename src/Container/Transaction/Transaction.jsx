@@ -15,9 +15,6 @@ class Transaction extends React.Component {
             riwayatTransaksi : [],
             isTampil: true
         };
-
-        // this.login = this.login.bind(this);
-        // this.onChange = this.onChange.bind(this);
     }
 
     componentDidMount(){
@@ -36,11 +33,10 @@ class Transaction extends React.Component {
             var xml = new XMLParser().parseFromString(res.data);
             var value = xml.getElementsByTagName('return')[0].value
             var data = JSON.parse(value);
-            data.forEach(element => {
-                console.log(element);  
-            });
+            // data.forEach(element => {
+            //     console.log(element);  
+            // });
 
-            // console.log(data);
             this.setState({
                 riwayatTransaksi: data
             })
@@ -50,8 +46,7 @@ class Transaction extends React.Component {
                     isTampil: false
                 })
             }
-            // ReactDOM.render(<TransactionList waktu="19-10-2019 17:04:29" jenis="debit" jumlah="300000" rekening="01234567"/>, document.getElementById('daftar-transaksi'))
-            // console.log(data);
+
         }).catch(err => {console.log(err)});
     }
 
@@ -59,9 +54,7 @@ class Transaction extends React.Component {
         return (
             <div className="transaction">
                 <Title title="Riwayat Transaksi"/>
-                {/* <div className="judul-transaksi">
-                    <h1>Riwayat Transaksi</h1>
-                </div> */}
+
                 <div className="riwayat-transaksi" id="daftar-transaksi">
                     {this.state.isTampil && (this.state.riwayatTransaksi).length === 0 && 
                     <div className="loader-riwayat-transaksi">
