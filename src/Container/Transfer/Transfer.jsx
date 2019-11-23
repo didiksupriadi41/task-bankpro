@@ -75,16 +75,16 @@ class Transfer extends React.Component {
           <button onClick={this.transfer} className="trf-button">Transfer</button>
         </form> }
       { this.state.isFetching &&
-          <div className="loader">
+          <div className="loader-transfer">
             <Loader
-              type="ThreeDots"
-              color="#000"
-              height={30}
-              width={30}
+              type="Puff"
+              color="#537258"
+              height={70}
+              width={70}
             />
           </div> }
-      { this.state.isSet && !this.state.status && <div className="status"><h5>Transaksi gagal</h5></div> }
-      { this.state.isSet && this.state.status && <div className="status"><h5>Transaksi berhasil</h5></div> }
+      { !this.state.isFetching && this.state.isSet && !this.state.status && <div className="status-failed"><h5>Transaksi gagal</h5></div> }
+      { !this.state.isFetching && this.state.isSet && this.state.status && <div className="status-succeed"><h5>Transaksi berhasil</h5></div> }
       </div>
     )
   }
