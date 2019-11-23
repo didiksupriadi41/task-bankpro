@@ -43,9 +43,9 @@ class Login extends React.Component {
             var xml = new XMLParser().parseFromString(res.data);
             var value = xml.getElementsByTagName('return')[0].value
             // var data = JSON.parse(value)[0];
-            console.log(value);
+            // console.log(value);
             if (value === 'true') {
-                console.log('fasdfasd');
+                // console.log('fasdfasd');
                 sessionStorage.setItem('noRek', this.state.noRekening);
                 this.props.onClicked()
             } else {
