@@ -1,6 +1,12 @@
+.loader-transfer {
+  width: fit-content;
+  margin: auto;
+}
+
 .transfer {
     padding-top: 10%;
     margin-left: 10%;
+    display: grid;
 }
 
 .transfer > form {
@@ -32,3 +38,19 @@
     border: none;
     margin-top: 10px;
 }
+
+.status-failed {
+  text-align: center;
+  color: red;
+}
+
+.status-failed {
+  text-align: center;
+  color: red;
+}
+
+.status-succeed {
+  text-align: center;
+  color: green;
+}
+
