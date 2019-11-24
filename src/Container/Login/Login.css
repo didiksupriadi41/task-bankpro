@@ -48,14 +48,6 @@
 }
 
 .login-button {
-    /* float: right;
-    padding: 10px;
-    border-radius: 5px;
-    background: black;
-    color: white;
-    border: none;
-    margin-top: 10px;
-    margin-right: 10px; */
     float: right;
     padding: 10px 0 10px;
     background: none;
@@ -72,10 +64,7 @@
 
 .loader-login {
     width: fit-content;
-    /* padding-bottom: 10px; */
-    /* text-align: center; */
     margin:auto;
-    /* color: #537528; */
 }
 
 .pesan-error {
