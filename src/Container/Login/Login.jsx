@@ -15,7 +15,6 @@ class Login extends React.Component {
             isTampilError: false
         };
 
-        // this.login = this.login.bind(this);
         this.onChange = this.onChange.bind(this);
     }
 
@@ -42,15 +41,11 @@ class Login extends React.Component {
         }).then(res => {
             var xml = new XMLParser().parseFromString(res.data);
             var value = xml.getElementsByTagName('return')[0].value
-            // var data = JSON.parse(value)[0];
-            // console.log(value);
             if (value === 'true') {
-                // console.log('fasdfasd');
                 sessionStorage.setItem('noRek', this.state.noRekening);
                 this.props.onClicked()
             } else {
                 this.setState({isFetching: false, isTampilError: true});
-                // this.setState({isTampilError: true});
             }
         }).catch(err => {console.log(err)});
     }
@@ -67,7 +62,6 @@ class Login extends React.Component {
                     <div className="no-rekening">
                     <input type="text" placeholder="No Rekening" className="login-no-rekening" onChange={this.onChange}/>
                     </div>
-                    {/* {this.state.isNoRekTrue && <span>TES</span>} */}
                     {!this.state.isFetching && <button onClick={this.handleLogin} className="login-button">></button>}
                     
                 </form>}
