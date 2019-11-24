@@ -1,0 +1,56 @@
+.loader-transfer {
+  width: fit-content;
+  margin: auto;
+}
+
+.transfer {
+    padding-top: 10%;
+    margin-left: 10%;
+    display: grid;
+}
+
+.transfer > form {
+    margin: auto;
+    width: 20%;
+}
+
+.trf-no-rekening, .trf-amount {
+    padding: 10px 0 10px 0;
+    position: relative;
+    display: block;
+    margin: 20px 0 20px 0;
+    border: none;
+    width: 100%;
+    font-size: medium;
+    border-bottom: 1px solid black;
+}
+
+.trf-no-rekening, .trf-amount:focus {
+    outline: none;
+}
+
+.trf-button {
+    float: right;
+    padding: 10px;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+.status-failed {
+  text-align: center;
+  color: red;
+}
+
+.status-failed {
+  text-align: center;
+  color: red;
+}
+
+.status-succeed {
+  text-align: center;
+  color: green;
+}
+

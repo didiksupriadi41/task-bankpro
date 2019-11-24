@@ -1,0 +1,29 @@
+.transaction-list {
+    margin: auto;
+    padding-top: 10px;
+    border-bottom: 1px solid grey;
+    width: fit-content;
+    text-align: center;
+    height: 30px;
+}
+
+.transaction-list span {
+    float: left;
+    width: 15em;
+}
+
+/* .transaction-list span : :first-child {
+    text-weight: bold;
+} */
+
+.transaction-list:first-child {
+    border-bottom: 5px solid black;
+    font-weight: bold;
+    /* font-size: 20px; */
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.transaction-list:last-child {
+    border: none;
+}

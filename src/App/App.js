@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
-import Navbar from '../Components/Navbar/Navbar';
 import Login from '../Container/Login/Login';
+import Navbar from '../Components/Navbar/Navbar';
 
 class App extends React.Component {
-	constructor(props){
+	constructor(props) {
 		super(props)
-		this.state = {
-			isLogin: false
+		if(sessionStorage.getItem('noRek')) {
+			this.state = {
+				isLogin: true
+			};
+		} else {
+			this.state = {
+				isLogin: false
+			}
 		}
 	}
 
@@ -18,6 +24,7 @@ class App extends React.Component {
 	}
 
 	triggerLogout = () => {
+		sessionStorage.removeItem('noRek');
 		this.setState({
 			isLogin: false
 		})
@@ -26,8 +33,8 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				{!this.state.isLogin && <Login onClicked={() => this.triggerLogin()}/>}
-				{this.state.isLogin && <Navbar onLogout={() => this.triggerLogout()}/>}
+				{!this.state.isLogin && <Login onClicked={() => this.triggerLogin()} />}
+				{this.state.isLogin && <Navbar onLogout={() => this.triggerLogout()} />}
 			</div>
 		)
 	}

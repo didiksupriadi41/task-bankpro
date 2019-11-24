@@ -1,0 +1,27 @@
+.profile-list {
+    margin: 5px auto;
+    width: fit-content;
+    text-align: center;
+    height: 30px;
+}
+
+.profile-list span {
+    float: left;
+    width: 10em;
+}
+
+.profile-category {
+    text-align: left;
+    font-weight: bold;
+}
+
+.profile-data {
+    text-align: right;
+}
+
+.loader {
+    float: left;
+    height: 2em;
+    text-align: right;
+    width: 10em;
+}
