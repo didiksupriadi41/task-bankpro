@@ -9,7 +9,18 @@ Aplikasi ini diimplementasikan diatas menggunakan
 
 #### Screenshot aplikasi
 
-![Screenshot](https://i.imgur.com/OjOQ9AT.png)
+1. Login
+![Screenshot](https://i.imgur.com/s47t2Lr.png)
+![Screenshot](https://i.imgur.com/XjmorWm.png)
+2. Halaman utama
+![Screenshot](https://i.imgur.com/a3LAgUF.png)
+![Screenshot](https://i.imgur.com/rjxj6As.png)
+3. Halaman transfer
+![Screenshot](https://i.imgur.com/GlHTRnu.png)
+![Screenshot](https://i.imgur.com/6r9fA41.png)
+4. Halaman riwayat transaksi
+![Screenshot](https://i.imgur.com/AhlwUCA.png)
+![Screenshot](https://i.imgur.com/qW8haN3.png)
 
 #### Pembagian tugas setiap anggota
 |**No**|**Fungsi**|**NIM**|
