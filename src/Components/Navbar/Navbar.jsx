@@ -14,8 +14,6 @@ const Navbar = (props) => {
             <div className="navbar">
                 <nav>
                 <ul>
-                    {/* {window.location.pathname === '/' && <li><Link to={'/'} id="logo-link"> <img src={logo} alt="logo" className="logo-navbar"/> </Link></li>} */}
-                    {/* {window.location.pathname !== '/' && <li><Link to={'/'} onClick={()=>setPage("Home")} id="logo-link"> <img src={logo} alt="logo" className="logo-navbar deactive"/> </Link></li>} */}
 
                     <li><Link to={'/'} onClick={()=>setPage("Home")} id="logo-link"> <img src={logo} alt="logo" className="logo-navbar deactive"/> </Link></li>
 
@@ -25,7 +23,6 @@ const Navbar = (props) => {
                     { window.location.pathname === '/transaction' && window.location.pathname !== '/' && <li><Link to={'/transaction'} className="active">Transaction</Link></li>}
                     { window.location.pathname !== '/transaction' && <li><Link to={'/transaction'} onClick={()=>setPage("Transaction")}>Transaction</Link></li>}
                     
-                    {/* <li>{props.page}</li> */}
                     <li><Link to={'/'} onClick={props.onLogout}>Logout</Link></li>
                 </ul>
                 </nav>

@@ -10,11 +10,6 @@ ul {
     background-color:#deffe6;
 }
 
-/* li {
-    float: left;
-    display: block;
-} */
-
 li a {
     display: block; 
     color: black;
@@ -39,7 +34,6 @@ Router {
 }
 
 #logo-link {
-    /* padding:10px; */
     padding: 0;
     text-align: center;
 }
