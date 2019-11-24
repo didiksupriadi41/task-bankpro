@@ -3,7 +3,6 @@ import './Transaction.css';
 import Title from '../../Components/Title/Title';
 import Axios from 'axios';
 import Loader from 'react-loader-spinner';
-// import ReactDOM from 'react-dom';
 import TransactionList from '../../Components/TransactionList/TransactionList';
 var XMLParser = require('react-xml-parser');
 
@@ -33,9 +32,6 @@ class Transaction extends React.Component {
             var xml = new XMLParser().parseFromString(res.data);
             var value = xml.getElementsByTagName('return')[0].value
             var data = JSON.parse(value);
-            // data.forEach(element => {
-            //     console.log(element);  
-            // });
 
             this.setState({
                 riwayatTransaksi: data
