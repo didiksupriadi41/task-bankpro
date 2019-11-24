@@ -1,0 +1,8 @@
+.home {
+    margin-left: 10%;
+    padding-top: 10%;
+}
+
+.home > p {
+    padding-left: 20em;
+}
