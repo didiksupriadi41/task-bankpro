@@ -22,6 +22,9 @@ Aplikasi ini diimplementasikan diatas menggunakan
 ![Screenshot](https://i.imgur.com/AhlwUCA.png)
 ![Screenshot](https://i.imgur.com/qW8haN3.png)
 
+#### URL deployment
+URL: http://34.227.112.253:4000/
+
 #### Pembagian tugas setiap anggota
 |**No**|**Fungsi**|**NIM**|
 |-|-|-|
@@ -34,8 +37,9 @@ Aplikasi ini diimplementasikan diatas menggunakan
 |**No**|**Tugas**|**NIM**|
 |-|-|-|
 |1|Code reviewer (PIC)|[13517126](#louis-cahyadi)|
-|2|CI/CD|[13517126](#louis-cahyadi)|
+|2|CI/CD|[13517012](#johanes)|
 |3|Unit testing|[13517126](#louis-cahyadi)|
+|4|Eksplorasi dan *setup* mesin deployment|[13517012](#johanes)|
 
 ## Big thanks
 * #### Asisten IF3110
