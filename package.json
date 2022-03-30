@@ -5,7 +5,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "easy-soap-request": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-adapter-react-16": "^1.15.6",
     "react": "^16.14.0",
     "react-dom": "^16.11.0",
     "react-loader-spinner": "^3.1.5",
