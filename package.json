@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.27.1",
+    "axios": "^0.27.2",
     "easy-soap-request": "^4.7.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "react": "^16.14.0",
